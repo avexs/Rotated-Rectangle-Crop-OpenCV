@@ -150,7 +150,7 @@ def crop_rotated_rectangle(image, rect):
 
     crop_center = (rotated_rect_bbx_upright_image.shape[1]//2, rotated_rect_bbx_upright_image.shape[0]//2)
 
-    return rotated_rect_bbx_upright_image[crop_center[1]-rect_height//2 : crop_center[1]+(rect_height-rect_height//2), crop_center[0]-rect_width//2 : crop_center[0]+(rect_width-rect_width//2)]
+    return rotated_rect_bbx_upright_image[int(crop_center[1]-rect_height//2) : int(crop_center[1]+(rect_height-rect_height//2)), int(crop_center[0]-rect_width//2) : int(crop_center[0]+(rect_width-rect_width//2))]
 
 
 
